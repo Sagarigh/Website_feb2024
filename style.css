@@ -1,0 +1,141 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'poppins', sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    width:99vw;
+    height:90vh;
+    background-image: url('images/background.png');
+    background-position: center;
+    background-size: cover;
+    padding: 0 8%;
+    position: relative;
+    overflow: hidden;
+}
+
+.logo{
+    /* width: 20px; */
+    padding-left: 5%;
+    height: 110px;
+    /* height: auto; */
+    display: flex;
+}
+
+.logo img{
+    width: 140px;
+    height: 140px;
+}
+
+.content{
+    top: 40%;
+    position: absolute;
+    transform: translateY(-50%);
+    color: #fff;
+}
+
+.content p{
+    font-size: 30px;
+    font-weight: 600;
+
+}
+
+.content h1{
+    font-size: 16px;
+    font-weight: 600;
+    margin-top: 10px;
+    margin-bottom: 30px;
+}
+
+.content h1 span{
+    color: #eabd23;
+}
+
+.content button{
+    background:transparent;
+    border:2px solid #fff;
+    outline: none;
+    padding:8px 15px ;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    margin-top: 30px;
+    cursor: pointer;
+    font-size: 12px;
+    border-color: #eabd23;
+    transition: transform 0.6s;
+
+}
+
+.content button:hover{
+    color:#eabd23;
+    transform: translateY(-5px);
+}
+
+.content button i{
+    width: 30px;
+    margin-left: 10px;
+    font-size: 15px;
+}
+
+.launch-time{
+    display: flex;
+}
+
+.launch-time div{
+    flex-basis: 20%;
+}
+
+.launch-time div p{
+    font-size: 50px;
+    margin-bottom: -14px;
+}
+
+.rocket{
+    width: 150px;
+    position: absolute;
+    right: 10%;
+    bottom: 0;
+    animation: rocket 4s linear infinite;
+   
+}
+
+@keyframes rocket {
+    0%{
+        bottom: 0;
+        opacity: 0;
+    }
+    
+    100%{
+
+        bottom: 105%;
+        opacity: 1;
+   
+
+    }
+}
+
+.copyright{
+    margin-top: 60px;
+    list-style: none;
+}
+
+.social-icons {
+    margin-top: 35px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin-right: 30px;
+    color: #fff; /* Adjust the color as needed */
+    font-size: 25px;
+    transition: transform 0.6s;
+
+}
+
+.social-icons a:hover {
+    color: #eabd23; /* Adjust the hover color as needed */
+    transform: translateY(-5px);
+}

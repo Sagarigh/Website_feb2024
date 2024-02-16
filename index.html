@@ -1,56 +1,94 @@
-<!DOCTYPE HTML>
-<html>
-	<head>
-		<title>Sagari Solution | Accounting and Financial Consulting</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-	</head>
-	<body class="is-preload">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sagari Solution | Accounting, Bookkeeping and Financial Consultant</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/bce21f529d.js" crossorigin="anonymous"></script> <!--font awesome-->
 
-		<!-- Header -->
-			<header id="header">
-				<div id="logo">
-					<img src="Sagari.png" alt="Sagari Solution Logo">
-				</div>
-			</header>
+</head>
+<body>
 
-			<header id="second-header">
-				<h1>Eventually</h1>
-				<p>Stay tuned for a Financial Consulting experience like never before. Your patience is greatly appreciated.</p>
-			</header>			
+    <div class="logo"><img src="images/logo.png" alt="logo"></div>
+    <div class="container">
 
-			<a style="
-			color: #ffffff !important;" href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=sagarisolution@gmail.com" target="_blank" class="gmail">Send me an E-mail</a>
+        <div class="content">
+            <p>Eventually</p>
+            <h1>Stay tuned for a <span>Financial Consulting</span> like never before. Your patience is greatly appreciated.</h1>
+            <div class="launch-time">
+                <div>
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+            
+            <!-- <button type="button"> Leave a Message <img src="images/triangle.png" alt=""></button> -->
+            <button type="button" onclick="window.open('https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=sagarisolution@gmail.com', '_blank')">Leave a Message <i class="fa-solid fa-paper-plane"></i></button>
 
-			<!-- Signup Form -->
-			<!-- <form id="signup-form" method="post" action="process_signup.php">
-				
-				<input type="text" name="name" id="name" placeholder="Your Name" required />
-				<input type="text" name="phone" id="phone" placeholder="Mobile number (with country code)" required />
-				<input type="email" name="email" id="email" placeholder="Email Address" required />
-				<input type="submit" value="Sign Up" />
-			</form> -->
-			
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/sagari-solution-9534322b5/" target=""><i class="fab fa-linkedin"></i></a>
+                <a href="#" target=""><i class="fab fa-facebook"></i></a>
+                <a href="https://twitter.com/sagarisolution" target="_blank"><i class="fab fa-twitter"></i></a>
+                <a href="https://www.instagram.com/sagarisolution/" target="_blank"><i class="fab fa-instagram"></i></a>
+            </div>
 
 
-		<!-- Footer -->
-			<footer id="footer">
-				<ul class="icons">
-					<li><a href="" target="_blank" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-					<li><a href="" target="_blank" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-					<!-- <li><a href="" class="icon brands fa-github"><span class="label">GitHub</span></a></li> -->
-					<li><a href="https://mail.google.com/mail/u/0/?fs=1&tf=cm&source=mailto&to=sagarisolution@gmail.com" target="_blank"" class="icon fa-envelope"><span class="label">Email</span></a></li>
-					
-				</ul>
-				<ul class="copyright">
-					<li>&copy; 2024 All Rights Reserved</li>
-<!-- 					<li>Credits: <a href="#">Sagari Solution</a></li> -->
-				</ul>
-			</footer>
+            <!-- ------------------------------Footer--------------------------------------- -->
+                <ul class="copyright">
+                    <li>&copy; 2024 All Rights Reserved</li>
+                    <!-- <li>Credits: <a href="sagarisolution.com.np">Sagari Solution</a></li> -->
+                </ul>
+    
+        </div>
+        <img src="images/rocket.png" class="rocket">
+    
+    
+    </div>
 
-		<!-- Scripts -->
-			<script src="assets/js/main.js"></script>
 
-	</body>
+
+    <script>
+        var CountDownDate= new Date("April 30, 2024 00:00:00").getTime();
+        var x = setInterval(function(){
+            var now=new Date().getTime();
+            var distance= CountDownDate-now;
+
+            var days = Math.floor(distance / (1000 * 60 * 60 * 24));
+            var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+            var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+            var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+            document.getElementById("days").innerHTML=days;
+            document.getElementById("hours").innerHTML=hours;
+            document.getElementById("minutes").innerHTML=minutes;
+            document.getElementById("seconds").innerHTML=seconds;
+
+            if (distance<0){
+                clearInterval(x);
+
+                document.getElementById("days").innerHTML=0;
+                document.getElementById("hours").innerHTML=0;
+                document.getElementById("minutes").innerHTML=0;
+                document.getElementById("seconds").innerHTML=0;
+
+            }
+
+        }, 1000);
+
+    </script>
+
+</body>
 </html>
